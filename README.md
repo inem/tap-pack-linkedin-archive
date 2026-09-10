@@ -1,4 +1,7 @@
-# linkedin.archive 0.1.0
+# linkedin.archive 0.1.1
+
+Version 0.1.1 declares the archive and its profile-relative output folder for
+generic TAP presentations.
 
 Passive external TAP Core reader pack. Opening a LinkedIn post, its reactions or
 comments supplies material; this pack never makes requests, opens pages, collects
@@ -56,8 +59,8 @@ Set CORE and SDK to the relevant source checkouts and OUT to a fresh directory:
 
 ```sh
 python3 "$SDK/sdk.py" --core "$CORE" build . --out "$OUT"
-python3 "$SDK/sdk.py" --core "$CORE" check "$OUT/linkedin.archive-0.1.0.tap-pack"
-python3 tests/check_core.py --core "$CORE" --artifact "$OUT/linkedin.archive-0.1.0.tap-pack"
+python3 "$SDK/sdk.py" --core "$CORE" check "$OUT/linkedin.archive-0.1.1.tap-pack"
+python3 tests/check_core.py --core "$CORE" --artifact "$OUT/linkedin.archive-0.1.1.tap-pack"
 ```
 
 The acceptance check uses the real Core immutable pack store, Writer and Reader
@@ -72,7 +75,7 @@ Install on a Core profile configured for Python reader components:
 
 ```sh
 tap --profile <profile> pack install <artifact-path>
-tap --profile <profile> pack enable linkedin.archive --version 0.1.0 \
+tap --profile <profile> pack enable linkedin.archive --version 0.1.1 \
   --grant-origin https://www.linkedin.com --grant-capability capture.read
 tap --profile <profile> on
 ```

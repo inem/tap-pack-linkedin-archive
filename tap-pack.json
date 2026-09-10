@@ -1,7 +1,10 @@
 {
-  "id":"linkedin.archive", "version":"0.1.0",
+  "id":"linkedin.archive", "version":"0.1.1",
   "intent":"Passively archive observed LinkedIn posts, reactions and comments with entity versions and collection context.",
   "license":"MIT", "files":["LICENSE","reader.py"],
   "entrypoints":{"reader":{"file":"reader.py","interface":"python-jsonl-v1"}},
+  "features":[
+    {"id":"archive","label":"LinkedIn archive","value":"Posts, reactions and comments","folder":"data/readers/linkedin.archive"}
+  ],
   "access":{"origins":["https://www.linkedin.com"],"capabilities":["capture.read"]}
 }
