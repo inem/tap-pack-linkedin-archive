@@ -1,0 +1,7 @@
+{
+  "id":"linkedin.archive", "version":"0.1.0",
+  "intent":"Passively archive observed LinkedIn posts, reactions and comments with entity versions and collection context.",
+  "license":"MIT", "files":["LICENSE","reader.py"],
+  "entrypoints":{"reader":{"file":"reader.py","interface":"python-jsonl-v1"}},
+  "access":{"origins":["https://www.linkedin.com"],"capabilities":["capture.read"]}
+}
