@@ -23,7 +23,7 @@ with tempfile.TemporaryDirectory(prefix='linkedin-core-') as tmp:
         components={'version':1,'python':sys.executable,'bun':'','readers':{},'handlers':{}})
     profile.save();store=PackStore(profile.root)
     store.install(args.artifact.resolve())
-    store.enable('linkedin.archive','0.1.0',origins=['https://www.linkedin.com'],capabilities=['capture.read'])
+    store.enable('linkedin.archive','0.1.1',origins=['https://www.linkedin.com'],capabilities=['capture.read'])
     spec=store.effective_components(profile.components)['readers']['linkedin.archive']
     seed=json.loads((core/'fixtures/capture/v1.jsonl').read_text().splitlines()[0])
     writer=Writer(profile.root/'data',profile.root/'state')
